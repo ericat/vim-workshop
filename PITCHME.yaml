@@ -1,0 +1,4 @@
+theme : white
+hightlight : monokai
+slide-number : true
+theme-override : assets/css/PITCHME.css

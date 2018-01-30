@@ -1,0 +1,15 @@
+.reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  text-transform: none;
+  color: #007f00;
+}
+
+.reveal section img {
+  border: 0;
+  box-shadow: none;
+}
+
+#wall {
+  color: red;
+}
+
+.reveal ul { list-style-type:none; }

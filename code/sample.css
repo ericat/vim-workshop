@@ -1,0 +1,52 @@
+.href--blue {
+  color: var(--blue);
+}
+
+.href--logo {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  display: flex;
+  align-items: flex-end;
+  color: var(--glossywhite);
+  font-size: 30px;
+
+  &:visited,
+  &:link,
+  &:focus,
+  &:hover,
+  &:active {
+    color: var(--white);
+  }
+
+  @media (--desktop) {
+    left: 40px;
+  }
+}
+
+.href--top {
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  background: var(--lightblue);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.2s;
+  padding: 10px;
+}
+
+.href--top::before {
+  content: url(../img/chevron--up.svg);
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.href--top:hover {
+  background: var(--blue);
+}
+
