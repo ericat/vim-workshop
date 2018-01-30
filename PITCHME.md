@@ -3,15 +3,13 @@
 <img class="cover" src="./assets/img/cover.png" />
 ---
 ## Vim Philosophy
-* @fa[hand-o-right] "Vim grammar" (commands are self-documenting)
-* @fa[hand-o-right] Modes: normal, insert, visual, command.
+* @fa[hand-right] "Vim grammar" (commands are self-documenting)
+* @fa[hand-right] Modes: normal, insert, visual, command.
 ---
 ## Why hate Vim?
 - counterintuitive |
 - does not seem to respond |
 - learning wall |
-
-<p id="wall">Sample styled element</p>
 ---
 ## The Learning Wall
 _viewed 1,392,379 times_
@@ -94,7 +92,19 @@ alias vimrc='vi ~/.vimrc'
 @[159-161](Delete, not cut)
 ---
 ## Vim Modes
-// TODO examples
+* normal
+* insert
+* visual
+* command
+---
+## Command
+* execute commands (:q, :vs, :wa)
+* operate on word/line/ranges without moving the cursor (5,10d)
+* interact with the command line (:source)
+---
+## Visual
+---
+## Insert
 ---
 ## Vim Grammar
 // TODO examples, like dw, ciw
@@ -119,13 +129,15 @@ command! Q q
 ## Autocomplete
 ---
 ## Productivity
+```
+5u // undo 5 times
+```
 ---
 ## Pain points
-- Delete is actually cut |
-- Copy and paste can be tricky to setup |
-- Global search and replace |
-- Ongoing learning |
-- Typos |
+- @fa[thumbs-down] Delete is actually cut |
+- @fa[thumbs-down] Copy and paste can be tricky to setup |
+- @fa[thumbs-down] Global search and replace |
+- @fa[thumbs-down] Typos |
 
 @fa[arrow-down]
 
@@ -134,7 +146,10 @@ Here is a replace gone wrong:
 
 ![Image-Absolute](assets/img/prototcolpe.jpg)
 
-The list includes: committng files called ":w", and much more...
+<p class="error">:s/y/col</p>
+<p class="success">:s/\<y\>/col</p>
+
+The fun includes: committng files called ":w", and much more...
 ---
 ## Resouces
 * [Open Vim](http://www.openvim.com/tutorial.html) @fa[keyboard-o]

@@ -8,8 +8,16 @@
   box-shadow: none;
 }
 
-#wall {
-  color: red;
+.reveal section img.cover {
+  border: 1px solid red
 }
 
 .reveal ul { list-style-type:none; }
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
