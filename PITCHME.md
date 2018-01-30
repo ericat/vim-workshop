@@ -1,6 +1,6 @@
 ---
 ## Do you even
-<img class="cover" src="./assets/cover.png" />
+<img class="cover" src="./assets/img/cover.png" />
 ---
 ## Vim Philosophy
 * @fa[hand-o-right] "Vim grammar" (commands are self-documenting)
@@ -18,7 +18,7 @@ _viewed 1,392,379 times_
 
 @title[Quitting Vim]
 
-![Image-Absolute](assets/quitting-so.png)
+![Image-Absolute](assets/img/quitting-so.png)
 
 <span style="font-size:0.5em">[Stack Overflow: Helping One Million Developers Exit Vim](https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor)</span>
 
@@ -27,7 +27,7 @@ _viewed 1,392,379 times_
 +++
 @title[Quitting Vim]
 
-![Image-Absolute](assets/quitting.jpg)
+![Image-Absolute](assets/img/quitting.jpg)
 ---
 ## Why learn Vim?
 - you dislike the mouse |
@@ -36,7 +36,7 @@ _viewed 1,392,379 times_
 - commands will just "work" elsewhere |
 - it sneakily opens |
 ---
-<img width="450px" src="./assets/vim-usage.png" />
+<img width="450px" src="./assets/img/vim-usage.png" />
 @title[Vim Usage]
 ---
 ## Vim Features
@@ -70,7 +70,7 @@ Optional, but good to have:
 ```
 alias vimrc='vi ~/.vimrc'
 ```
-+++?code=vimrc-sample&lang=bash&title=Plugins or Native Features?
++++?code=assets/vimrc-sample&lang=bash&title=Plugins or Native Features?
 
 @fa[arrow-down]
 
@@ -78,7 +78,7 @@ alias vimrc='vi ~/.vimrc'
 
 @fa[arrow-down]
 
-+++?code=vimrc-sample&lang=bash&title=Set your preferences
++++?code=assets/vimrc-sample&lang=bash&title=Set your preferences
 
 @fa[arrow-down]
 
@@ -86,11 +86,11 @@ alias vimrc='vi ~/.vimrc'
 
 @fa[arrow-down]
 
-+++?code=vimrc-sample&lang=bash&title=Map key combinations
++++?code=assets/vimrc-sample&lang=bash&title=Map key combinations
 
 @[151-155](iTerm shortcuts)
 
-+++?code=vimrc-sample&lang=bash&title=Change behaviour
++++?code=assets/vimrc-sample&lang=bash&title=Change behaviour
 @[159-161](Delete, not cut)
 ---
 ## Vim Modes
@@ -132,7 +132,7 @@ command! Q q
 +++
 Here is a replace gone wrong:
 
-![Image-Absolute](assets/prototcolpe.jpg)
+![Image-Absolute](assets/img/prototcolpe.jpg)
 
 The list includes: committng files called ":w", and much more...
 ---
@@ -147,5 +147,5 @@ The list includes: committng files called ":w", and much more...
 
 @fa[arrow-down]
 
-+++?image=/assets/keyboard.jpg
++++?image=/assets/img/keyboard.jpg
 @title[Keyboard Cover]
