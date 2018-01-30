@@ -2,62 +2,58 @@
 ## Do you even
 <img class="cover" src="./assets/img/cover.png" />
 ---
-## Vim Philosophy
-* @fa[hand-o-right] "Vim grammar" (commands are self-documenting)
-* @fa[hand-o-right] Modes: normal, insert, visual, command.
----
 ## Why hate Vim?
 - counterintuitive |
-- does not seem to respond |
 - learning wall |
-
-<p id="wall">Sample styled element</p>
 ---
 ## The Learning Wall
 _viewed 1,392,379 times_
 
 @title[Quitting Vim]
-
 ![Image-Absolute](assets/img/quitting-so.png)
-
+<br />
 <span style="font-size:0.5em">[Stack Overflow: Helping One Million Developers Exit Vim](https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor)</span>
 
 @fa[arrow-down]
 
 +++
 @title[Quitting Vim]
-
 ![Image-Absolute](assets/img/quitting.jpg)
+
++++
+@title[Quitting Vim]
+![Image-Absolute](assets/img/trapped.jpg)
 ---
-## Why learn Vim?
+## Why Learn Vim?
 - you dislike the mouse |
-- context switch |
-- different mindset |
+- context switch - it slows you down |
 - commands will just "work" elsewhere |
 - it sneakily opens |
 ---
-<img width="450px" src="./assets/img/vim-usage.png" />
 @title[Vim Usage]
+![Image-Absolute](assets/img/vim-usage.png)
+<br />
+<span style="font-size:0.5em">[2018 Developer Skills Report - HackerRank](http://research.hackerrank.com/developer-skills/2018/)</span>
 ---
-## Vim Features
-Pretty much everything you do with your favourite editor, plus:
-- simple arithmetic |
-- interact with the shell |
-- save text into registers |
-- built-in version control |
+## Vim Philosophy
+<ul class="none">
+  <li>@fa[hand-o-right] "Vim grammar" (commands are self-documenting)</li>
+  <li>@fa[hand-o-right] Modes: normal, insert, visual, command.</li>
+</ul>
 ---
 ## Where to Start
-@fa[terminal] _brew install vim_
+<div class="terminal">
+  $ brew install vim
+</div>
 
 ...what next?
 ---
 ## Configuration Time
-* get Vundle  - install plugins with one command
-* `touch ~/.vimrc`
-* enable arrows in insert mode
-* enable mouse
-* set your leader key
-* remap ESC
+- get Vundle  - install plugins with one command
+- `touch ~/.vimrc`
+- enable arrows in insert mode
+- enable mouse
+- remap ESC
 ---
 ## Your .vimrc
 Edit directly from Vim:
@@ -70,34 +66,15 @@ Optional, but good to have:
 ```
 alias vimrc='vi ~/.vimrc'
 ```
-+++?code=assets/vimrc-sample&lang=bash&title=Plugins or Native Features?
 
 @fa[arrow-down]
 
-@[9-24](Plugins)
++++?code=assets/vimrc-sample&lang=bash&title=Source: .vimrc
 
-@fa[arrow-down]
-
-+++?code=assets/vimrc-sample&lang=bash&title=Set your preferences
-
-@fa[arrow-down]
-
-@[43](Enable mouse), @[74](Show line number), @[86](Highlight matches when searching)
-
-@fa[arrow-down]
-
-+++?code=assets/vimrc-sample&lang=bash&title=Map key combinations
-
-@[151-155](iTerm shortcuts)
-
-+++?code=assets/vimrc-sample&lang=bash&title=Change behaviour
-@[159-161](Delete, not cut)
----
-## Vim Modes
-// TODO examples
----
-## Vim Grammar
-// TODO examples, like dw, ciw
+@[43](Enable mouse.)
+@[74](Show line number.)
+@[86](Highlight matches when searching)
+@[159-161](Delete, not cut!)
 ---
 ## Exit Vim
 ```
@@ -116,34 +93,136 @@ command! Wq wq
 command! Q q
 ```
 ---
-## Autocomplete
+## Vim Modes
+- normal, *Esc*
+- insert, *i*
+- visual, *v*
+- command, *:*
 ---
-## Productivity
----
-## Pain points
-- Delete is actually cut |
-- Copy and paste can be tricky to setup |
-- Global search and replace |
-- Ongoing learning |
-- Typos |
+## Command Mode
+- execute commands (:q, :vs, :wa)
+- settings on the fly
+- operate on word/line/ranges without moving the cursor (:5,10d)
+- interact with the command line (:source)
 
 @fa[arrow-down]
 
 +++
-Here is a replace gone wrong:
+Some examples:
+```
+:m17
+:t17
+:!ls // fg
+```
+---
+## Selecting Text
+```
+v // selects a character
+V // selects line
+o  // moves end / start selection
+```
+
+Other examples:
+```
+vw
+vit
+vi"
+vi(
+vt;
+```
+---
+## Editing Text
+```
+i, I // insert
+c, C // change
+a, A // append
+o, O // open a line
+```
+---
+## Deleting Text
+```
+d, dd
+d/vim
+r // replace a char
+x // delete a char
+```
+From insert mode:
+```
+Ctrl h // char
+Ctrl w // word
+Ctrl u // line
+```
+---
+## Undo, Redo
+It's simple!
+```
+u
+Ctrl r
+```
+---
+## Moving Around
+In a file
+```
+h j k l
+w, b
+%  // matching brackets
+:n // move to line num
+0 // beginning of line
+$ // end of line
+f <char>
+; // next match
+, // prev match
+```
+
+In the window:
+```
+H
+M
+L
+```
+---
+## Productivity
+```
+5u // undo 5 times
+xp // swap characters
+:sort
+:12,15norm dit // norm command
+Ctrl a, Ctrl x // increment / decrement
+```
+
+Open file at line 21:
+```
+vi +21 file.js -c d
+```
+---
+## Pain Points
+<ul class="none">
+  <li>@fa[thumbs-down] Delete is actually cut</li>
+  <li>@fa[thumbs-down] Copy and paste needs some work</li>
+  <li>@fa[thumbs-down] Global search and replace</li>
+  <li>@fa[thumbs-down] Typos</li>
+</ul>
+
+@fa[arrow-down]
+
++++
+## Things Will Go Wrong
 
 ![Image-Absolute](assets/img/prototcolpe.jpg)
 
-The list includes: committng files called ":w", and much more...
+<p class="error">:s/y/col</p>
+<p class="success">:s/\&lt;y/&gt;/col</p>
 ---
-## Resouces
-* [Open Vim](http://www.openvim.com/tutorial.html) @fa[keyboard-o]
-* [Vim Galore](https://github.com/mhinz/vim-galore) @fa[github-alt]
-* [Vim gifs](https://vimgifs.com/)
-* [Vim cheatsheet](https://vim.rtorr.com/)
-* [Vim adventure](https://vim-adventures.com/) @fa[gamepad]
-* [Learn to Use Vim](https://egghead.io/courses/learn-to-use-vim) @fa[video-camera]
-* [Mastering Vim](https://jovicailic.org/mastering-vim-quickly/) @fa[book]
+## Resources
+<ul class="none">
+ <li>@fa[keyboard-o] [Open Vim](http://www.openvim.com/tutorial.html)</li>
+ <li>@fa[github-alt] [Vim Galore](https://github.com/mhinz/vim-galore)</li>
+ <li>@fa[link] [Vim gifs](https://vimgifs.com/)</li>
+ <li>@fa[link] [Vim cheatsheet](https://vim.rtorr.com/)</li>
+ <li>@fa[gamepad] [Vim adventure](https://vim-adventures.com/)</li>
+ <li>@fa[video-camera] [Learn to Use Vim](https://egghead.io/courses/learn-to-use-vim)</li>
+ <li>@fa[book] [Mastering Vim](https://jovicailic.org/mastering-vim-quickly/)</li>
+</ul>
 
 @fa[arrow-down]
 
