@@ -22,13 +22,3 @@ select all lines, for example: 5j
 .
 ```
 
-Task: add pipe | at beginning and end
-```
-| Service | Address | Comments |
-| ------------- |:-------------:| -----:|
-http://app.checkoutlocal.com
-http://api.checkoutlocal.com/
-http://logger.checkoutlocal.com/
-https://qa.checkout.seatwave.com/
-https://checkout.seatwave.com
-```

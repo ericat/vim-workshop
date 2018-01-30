@@ -10,6 +10,7 @@ S // delete entire line and switch to insert mode
 Some examples:
 ```
 ciw
+20i= // insert 20 =
 ```
 
 ### Undo / Redo
