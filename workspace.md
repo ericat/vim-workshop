@@ -61,10 +61,19 @@ https://checkout.seatwave.com
 ```
 
 ```
-i | // line 65
+i | // line 56
 Esc
 Ctrl v
 4j
 .
 ```
 
+### Task 7: Increment / Decrement
+```
+.href--logo {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  display: flex;
+}
+```

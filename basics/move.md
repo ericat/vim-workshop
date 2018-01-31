@@ -48,3 +48,20 @@ fingers on `j`, `k`, `l` and `;`.
 If the middle finger is pivot, the one to its right will move the cursor to the right.
 Note: you should not use h and l to move around much. They are often used
 for off-by-one errors.
+
+## Move within file, window
+```
+G
+gg
+
+H
+M
+L
+```
+
+Redraw the screen:
+```
+zz
+zp
+zb
+```

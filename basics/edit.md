@@ -99,5 +99,3 @@ ddp
 gUU // uppercase whole line
 guu // lowercase whole line
 ```
-
-

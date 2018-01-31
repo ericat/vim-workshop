@@ -2,15 +2,8 @@
 ## Do you even
 <img class="cover" src="./assets/img/cover.png" />
 ---
-## Vim Philosophy
-<ul class="none">
-  <li>@fa[hand-o-right] "Vim grammar" (commands are self-documenting)</li>
-  <li>@fa[hand-o-right] Modes: normal, insert, visual, command.</li>
-</ul>
----
 ## Why hate Vim?
 - counterintuitive |
-- does not seem to respond |
 - learning wall |
 ---
 ## The Learning Wall
@@ -35,7 +28,6 @@ _viewed 1,392,379 times_
 ## Why learn Vim?
 - you dislike the mouse |
 - context switch - it slows you down |
-- different mindset |
 - commands will just "work" elsewhere |
 - it sneakily opens |
 ---
@@ -44,13 +36,10 @@ _viewed 1,392,379 times_
 <br />
 <span style="font-size:0.5em">[2018 Developer Skills Report - HackerRank](http://research.hackerrank.com/developer-skills/2018/)</span>
 ---
-## Vim Features
-Pretty much everything, plus:
+## Vim Philosophy
 <ul class="none">
-  <li>@fa[thumbs-up] simple arithmetic</li>
-  <li>@fa[thumbs-up] interact with the shell</li>
-  <li>@fa[thumbs-up] save text into registers</li>
-  <li>@fa[thumbs-up] built-in version control</li>
+  <li>@fa[hand-o-right] "Vim grammar" (commands are self-documenting)</li>
+  <li>@fa[hand-o-right] Modes: normal, insert, visual, command.</li>
 </ul>
 ---
 ## Where to Start
@@ -65,7 +54,6 @@ Pretty much everything, plus:
 - `touch ~/.vimrc`
 - enable arrows in insert mode
 - enable mouse
-- set your leader key
 - remap ESC
 ---
 ## Your .vimrc
@@ -90,44 +78,6 @@ alias vimrc='vi ~/.vimrc'
 @[151-155](iTerm shortcuts.)
 @[159-161](Delete, not cut!)
 ---
-## Vim Modes
-- normal
-- insert
-- visual
-- command
----
-## Command Mode
-- execute commands (:q, :vs, :wa) |
-- operate on word/line/ranges without moving the cursor (5,10d) |
-- interact with the command line (:source) |
-
-```
-:m17
-:t17
-:!ls // fg
-```
----
-## Visual Mode
-- _visually selecting_ text
-- redefine boundaries of selection with o
-
-```
-v selects a character; begins selection;
-V selects line.
-```
-
-Other examples:
-```
-vit
-vi"
-vt;
-```
----
-## Insert Mode
----
-## Vim Grammar
-// TODO examples, like dw, ciw
----
 ## Exit Vim
 ```
 :w
@@ -145,12 +95,101 @@ command! Wq wq
 command! Q q
 ```
 ---
-## Autocomplete
+## Vim Modes
+- normal, *Esc*
+- insert, *i*
+- visual, *v*
+- command, *:*
 ---
+## Commands
+- execute commands (:q, :vs, :wa) |
+- operate on word/line/ranges without moving the cursor (5,10d) |
+- interact with the command line (:source) |
+
+@fa[arrow-down]
+
++++
+Some examples:
+```
+:m17
+:t17
+:!ls // fg
+```
+---
+## Selecting text
+- _visually selecting_ text
+- move end / start of the selection with o
+
+```
+v selects a character; begins selection;
+V selects line.
+```
+
+Other examples:
+```
+vw
+vit
+vi"
+vi(
+vt;
+```
+---
+## Editing text
+```
+i, I // insert
+c, C // change
+a, A // insert (end)
+o, O // open a line
+```
+---
+## Deleting text
+```
+d, D
+d/vim
+r // replace
+x // delete a character
+```
+From insert mode:
+```
+Ctrl h // char
+Ctrl w // word
+Ctrl u // line
+```
+---
+## Undo, Redo
+It's simple!
+```
+u
+Ctrl r
+```
+## Moving around
+In a file
+```
+h j k l
+w, b
+%  // matching brackets
+```
+
+In the window:
+```
+H
+M
+L
+```
+
+With find:
+```
+f <char>
+;
+,
+```
 ## Productivity
 ```
 5u // undo 5 times
+xp // swap characters
+:sort
 :12,15norm dit // norm command
+Ctrl a, Ctrl x // increment / decrement
 ```
 ---
 ## Pain points
@@ -165,7 +204,6 @@ command! Q q
 
 +++
 ## When things go wrong
-
 ![Image-Absolute](assets/img/prototcolpe.jpg)
 
 <p class="error">:s/y/col</p>
