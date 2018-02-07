@@ -77,3 +77,16 @@ Ctrl v
   display: flex;
 }
 ```
+
+
+### Task 8: replace when not part of a word
+```
+prototype
+col
+```
+
+```
+:s/\<y\>/col
+```
+
+

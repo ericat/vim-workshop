@@ -207,7 +207,7 @@ Ctrl a, Ctrl x // increment / decrement
 ![Image-Absolute](assets/img/prototcolpe.jpg)
 
 <p class="error">:s/y/col</p>
-<p class="success">:s/\&lt;y/&gt;/col</p>
+<p class="success">:s/\&lt;y\&gt;/col</p>
 ---
 ## Resources
 <ul class="none">
