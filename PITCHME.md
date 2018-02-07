@@ -211,7 +211,7 @@ vi +21 file.js -c d
 ![Image-Absolute](assets/img/prototcolpe.jpg)
 
 <p class="error">:s/y/col</p>
-<p class="success">:s/\&lt;y/&gt;/col</p>
+<p class="success">:s/\&lt;y\&gt;/col</p>
 ---
 ## Resources
 <ul class="none">
